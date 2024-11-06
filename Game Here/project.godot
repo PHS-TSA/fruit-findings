@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Video Game Design"
+run/main_scene="res://save/Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -18,3 +19,18 @@ config/icon="res://icon.svg"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[input]
+
+lefy={
+"deadzone": 0.5,
+"events": []
+}
+left={
+"deadzone": 0.5,
+"events": []
+}
+right={
+"deadzone": 0.5,
+"events": []
+}
