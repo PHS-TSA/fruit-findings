@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c67434ti8hr7e"]
+
+[ext_resource type="Texture2D" uid="uid://pn5blhubhcio" path="res://Free/Other/Dust Particle.png" id="1_366n8"]
+[ext_resource type="Script" path="res://squid.gd" id="2_exhrb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Squid" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_366n8")
+script = ExtResource("2_exhrb")

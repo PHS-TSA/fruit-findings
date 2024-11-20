@@ -1,7 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730925386
+::res://::1732136562
 icon.svg::CompressedTexture2D::9001325675529861616::1729088856::1730220835::1::::<><>::
-Main.tscn::PackedScene::8827800277600984179::1729803925::0::1::::<><>::uid://60pbd7sicah::::res://Free/Main Characters/Virtual Guy/Jump (32x32).png
+sprite_2d.gd::GDScript::-1::1731531456::0::1::::<>Sprite2D<>::
+squid.gd::GDScript::-1::1731531877::0::1::::<>Sprite2D<>::
+Squid.tscn::PackedScene::7016567956250999824::1731534850::0::1::::<><>::uid://pn5blhubhcio::::res://Free/Other/Dust Particle.png<>res://squid.gd
+timer.gd::GDScript::-1::1731530615::0::1::::<>Timer<>::
 ::res://addons/::1730897681
 ::res://addons/godot-git-plugin/::1730897681
 git_plugin.gdextension::GDExtension::-1::1730897663::0::1::::<><>::
@@ -222,5 +225,16 @@ Idle.png::CompressedTexture2D::7181204418746547008::1729680148::1730220835::1:::
 ::res://Free/Traps/Trampoline/::1730220835
 Idle.png::CompressedTexture2D::191654285577222018::1729680148::1730220835::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::5505856663351171397::1729680148::1730220835::1::::<><>::
-::res://new/::1729804393
-::res://save/::1729684120
+::res://save/::1731534864
+apple.gd::GDScript::-1::1731531877::0::1::::<>RigidBody2D<>::
+Apple.tscn::PackedScene::6190904965455276441::1731534850::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/apple.gd
+background.tscn::PackedScene::4079474316726175953::1731530615::0::1::::<><>::uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png
+fruit.gd::GDScript::-1::1731530615::0::1::::<>CharacterBody2D<>::
+fruit.tscn::PackedScene::4896524693389371285::1731534850::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/fruit.gd
+fruit_spawn.tscn::PackedScene::6621475301742598087::1730944976::0::1::::<><>::
+fruit_spawner.tscn::PackedScene::6833067491716393254::1730950915::0::1::::<><>::res://timer.gd
+main.gd::GDScript::-1::1731531877::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::4242818452981430660::1731534849::0::1::::<><>::res://save/main.gd<>uid://c5df6aa61u0v::::res://save/Player.tscn<>uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png<>uid://cug6khee8tcdd::::res://save/Apple.tscn
+node_2d.tscn::PackedScene::5250518155713698586::1730925489::0::1::::<><>::
+Player.gd::GDScript::-1::1731534849::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::202501728112008695::1731534850::0::1::::<><>::res://save/Player.gd<>uid://djhpvioutlayw::::res://Free/Main Characters/Virtual Guy/Idle (32x32).png

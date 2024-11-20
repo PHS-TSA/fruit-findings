@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4l8vgq2lwfgg"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_3kik3"]
+
+[node name="FruitSpawner" type="Node2D"]
+
+[node name="Spawner" type="Node2D" parent="."]
+
+[node name="Marker2D6" type="Marker2D" parent="Spawner"]
+position = Vector2(800, -1)
+
+[node name="Marker2D" type="Marker2D" parent="Spawner"]
+position = Vector2(571, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="Spawner"]
+position = Vector2(329, 0)
+
+[node name="Marker2D3" type="Marker2D" parent="Spawner"]
+position = Vector2(112, -2)
+
+[node name="Marker2D4" type="Marker2D" parent="Spawner"]
+position = Vector2(1010, 1)
+
+[node name="Timer" type="Timer" parent="Spawner"]
+autostart = true
+script = ExtResource("1_3kik3")
+
+[connection signal="timeout" from="Spawner/Timer" to="Spawner/Timer" method="_on_timeout"]
