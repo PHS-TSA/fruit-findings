@@ -11,6 +11,6 @@ func _ready() -> void:
 func _on_timer_timeout():
 	randomize()
 	var apple = preload("res://save/Apple.tscn").instantiate()
-	apple.position.y = 30
+	apple.position.y = -250
 	apple.position.x = randf_range(-470, 510)
 	add_child(apple)
