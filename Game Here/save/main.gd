@@ -14,3 +14,4 @@ func _on_timer_timeout():
 	apple.position.y = -250
 	apple.position.x = randf_range(-470, 510)
 	add_child(apple)
+	print("print")

@@ -1,10 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1piunv4eyaxw"]
+[gd_scene load_steps=11 format=3 uid="uid://b1piunv4eyaxw"]
 
-[ext_resource type="Script" path="res://save/main.gd" id="1_ig3jy"]
 [ext_resource type="PackedScene" uid="uid://c5df6aa61u0v" path="res://save/Player.tscn" id="1_u8fys"]
 [ext_resource type="Texture2D" uid="uid://qta5l2kmvv8u" path="res://Free/Background/Green.png" id="1_vtncp"]
 [ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="3_msmfp"]
+[ext_resource type="PackedScene" uid="uid://bjigdwmb8lt2d" path="res://testcollectable.tscn" id="5_jh5sb"]
 [ext_resource type="PackedScene" uid="uid://cug6khee8tcdd" path="res://save/Apple.tscn" id="6_ftopx"]
+[ext_resource type="PackedScene" uid="uid://30p2lbo1ycnv" path="res://game_manager.tscn" id="6_yq3yj"]
+
+[sub_resource type="GDScript" id="GDScript_5n113"]
+script/source = "extends Node2D
+#@export var squid_object : PackedScene
+
+func _ready() -> void:
+	var timer = Timer.new()
+	timer.wait_time = 1.7
+	timer.autostart = true
+	add_child(timer)
+	timer.timeout.connect(_on_timer_timeout)
+	
+func _on_timer_timeout():
+	randomize()
+	var apple = preload(\"res://save/Apple.tscn\").instantiate()
+	apple.position.y = -250
+	apple.position.x = randf_range(-470, 510)
+	add_child(apple)
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdj32"]
 texture = ExtResource("3_msmfp")
@@ -545,7 +565,7 @@ sources/1 = SubResource("TileSetAtlasSource_jdj32")
 sources/2 = SubResource("TileSetAtlasSource_d0f0g")
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_ig3jy")
+script = SubResource("GDScript_5n113")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -569,11 +589,17 @@ format = 2
 layer_0/tile_data = PackedInt32Array(393205, 393217, 1, 393206, 458753, 1, 393207, 524289, 1, 393208, 393217, 1, 393209, 458753, 1, 393210, 524289, 1, 393211, 393217, 1, 393212, 458753, 1, 393213, 524289, 1, 393214, 393217, 1, 393215, 458753, 1, 327680, 524289, 1, 327681, 393217, 1, 327682, 458753, 1, 327683, 524289, 1, 327684, 393217, 1, 327685, 458753, 1, 327686, 524289, 1, 327687, 458753, 1, 327688, 393217, 1, 327689, 458753, 1, 327690, 524289, 1, 327669, 393217, 0, 327670, 458753, 0, 327671, 524289, 0, 327672, 393217, 0, 327673, 458753, 0, 327674, 524289, 0, 327675, 393217, 0, 327676, 458753, 0, 327677, 524289, 0, 327678, 393217, 0, 327679, 458753, 0, 262144, 524289, 0, 262145, 393217, 0, 262146, 458753, 0, 262147, 524289, 0, 262148, 393217, 0, 262149, 458753, 0, 262150, 524289, 0, 262151, 458753, 0, 262152, 393217, 0, 262153, 458753, 0, 262154, 524289, 0, 393204, 1, 5, 327668, 1, 5, 262132, 1, 5, 196596, 1, 5, 131060, 1, 5, 65524, 1, 5, -12, 1, 5, -65548, 1, 5, -131084, 1, 5, -196620, 1, 5, -262156, 1, 5, -327692, 1, 5, -393228, 1, 4, 458740, 1, 6, -393227, 65537, 4, -393226, 65537, 4, -393225, 65537, 4, -393224, 65537, 4, -393223, 65537, 4, -393222, 65537, 4, -393221, 65537, 4, -393220, 65537, 4, -393219, 65537, 4, -393218, 65537, 4, -393217, 65537, 4, -458752, 65537, 4, -458751, 65537, 4, -458750, 65537, 4, -458749, 65537, 4, -458748, 65537, 4, -458747, 65537, 4, -458746, 65537, 4, -458745, 65537, 4, -458744, 65537, 4, -458743, 65537, 4, -458742, 65537, 4, 458741, 65537, 6, 458742, 65537, 6, 458743, 65537, 6, 458744, 65537, 6, 458745, 65537, 6, 458746, 65537, 6, 458747, 65537, 6, 458748, 65537, 6, 458749, 65537, 6, 458750, 65537, 6, 458751, 65537, 6, 393216, 65537, 6, 393217, 65537, 6, 393218, 65537, 6, 393219, 65537, 6, 393220, 65537, 6, 393221, 65537, 6, 393222, 65537, 6, 393223, 65537, 6, 393224, 65537, 6, 393225, 65537, 6, 393226, 65537, 6, 393227, 131073, 6, -393205, 131073, 5, -327669, 131073, 5, -262133, 131073, 5, -196597, 131073, 5, -131061, 131073, 5, -65525, 131073, 5, 11, 131073, 5, 65547, 131073, 5, 131083, 131073, 5, 196619, 131073, 5, 262155, 131073, 5, 327691, 131073, 5, -458741, 131073, 4)
 
 [node name="Player" parent="." instance=ExtResource("1_u8fys")]
-position = Vector2(-183, -215)
+position = Vector2(21, 172)
 scale = Vector2(3, 3)
 
 [node name="Apple" parent="." instance=ExtResource("6_ftopx")]
-position = Vector2(-3, -380)
+position = Vector2(15, -363)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 2)
+
+[node name="Area2D" parent="." instance=ExtResource("5_jh5sb")]
+position = Vector2(-414, -23)
+
+[node name="GameManager" parent="." instance=ExtResource("6_yq3yj")]
+unique_name_in_owner = true

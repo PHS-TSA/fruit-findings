@@ -1,11 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1732220216
+::res://::1733344463
 character_body_2d.gd::GDScript::-1::1732139703::0::1::::<>CharacterBody2D<>::
 icon.svg::CompressedTexture2D::9001325675529861616::1729088856::1730220835::1::::<><>::
-node_2d.tscn::PackedScene::4426858453437251231::1732138394::0::1::::<><>::res://character_body_2d.gd
+node_2d.gd::GDScript::-1::1732569407::0::1::::<>Area2D<>::
+node_2d.tscn::PackedScene::4426858453437251231::1732569556::0::1::::<><>::res://node_2d.gd
 sprite_2d.gd::GDScript::-1::1732136856::0::1::::<>Sprite2D<>::
 squid.gd::GDScript::-1::1731531877::0::1::::<>Sprite2D<>::
 Squid.tscn::PackedScene::7016567956250999824::1731534850::0::1::::<><>::uid://pn5blhubhcio::::res://Free/Other/Dust Particle.png<>res://squid.gd
+testfruit.gd::GDScript::-1::1732568701::0::1::::<>Area2D<>::
+testfruit.tscn::PackedScene::4756001795955124563::1732568730::0::1::::<><>::res://testfruit.gd<>uid://cr21ygx1r1ic3::::res://Free/Items/Fruits/Melon.png
 timer.gd::GDScript::-1::1731530615::0::1::::<>Timer<>::
 ::res://addons/::1730897681
 ::res://addons/godot-git-plugin/::1730897681
@@ -227,9 +230,10 @@ Idle.png::CompressedTexture2D::7181204418746547008::1729680148::1730220835::1:::
 ::res://Free/Traps/Trampoline/::1730220835
 Idle.png::CompressedTexture2D::191654285577222018::1729680148::1730220835::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::5505856663351171397::1729680148::1730220835::1::::<><>::
-::res://save/::1732220288
-apple.gd::GDScript::-1::1732143312::0::1::::<>RigidBody2D<>::
-Apple.tscn::PackedScene::6190904965455276441::1732220288::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/apple.gd
+::res://save/::1732569569
+apple.gd::GDScript::-1::1732568953::0::1::::<>RigidBody2D<>::
+Apple.tscn::PackedScene::6190904965455276441::1732569560::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/apple.gd
+area_2d.gd::GDScript::-1::1732567851::0::1::::<>Area2D<>::
 background.tscn::PackedScene::4079474316726175953::1731530615::0::1::::<><>::uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png
 character_body_2d.gd::GDScript::-1::1732140521::0::1::::<>CharacterBody2D<>::
 fruit.gd::GDScript::-1::1731530615::0::1::::<>CharacterBody2D<>::
@@ -237,7 +241,7 @@ fruit.tscn::PackedScene::4896524693389371285::1731534850::0::1::::<><>::uid://c5
 fruit_spawn.tscn::PackedScene::6621475301742598087::1730944976::0::1::::<><>::
 fruit_spawner.tscn::PackedScene::6833067491716393254::1730950915::0::1::::<><>::res://timer.gd
 main.gd::GDScript::-1::1732217926::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::4242818452981430660::1732220209::0::1::::<><>::res://save/main.gd<>uid://c5df6aa61u0v::::res://save/Player.tscn<>uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png<>uid://cug6khee8tcdd::::res://save/Apple.tscn
+Main.tscn::PackedScene::4242818452981430660::1732568982::0::1::::<><>::res://save/main.gd<>uid://c5df6aa61u0v::::res://save/Player.tscn<>uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png<>uid://cug6khee8tcdd::::res://save/Apple.tscn
 node_2d.tscn::PackedScene::5250518155713698586::1730925489::0::1::::<><>::
-Player.gd::GDScript::-1::1732142933::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::202501728112008695::1732220209::0::1::::<><>::res://save/player.gd<>uid://djhpvioutlayw::::res://Free/Main Characters/Virtual Guy/Idle (32x32).png<>uid://60pbd7sicah::::res://Free/Main Characters/Virtual Guy/Jump (32x32).png<>uid://sbealox0yqgc::::res://Free/Main Characters/Virtual Guy/Fall (32x32).png<>uid://cdi3i7iya7m0c::::res://Free/Main Characters/Virtual Guy/Run (32x32).png
+Player.gd::GDScript::-1::1732219493::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::202501728112008695::1732568982::0::1::::<><>::res://save/player.gd<>uid://djhpvioutlayw::::res://Free/Main Characters/Virtual Guy/Idle (32x32).png<>uid://60pbd7sicah::::res://Free/Main Characters/Virtual Guy/Jump (32x32).png<>uid://sbealox0yqgc::::res://Free/Main Characters/Virtual Guy/Fall (32x32).png<>uid://cdi3i7iya7m0c::::res://Free/Main Characters/Virtual Guy/Run (32x32).png

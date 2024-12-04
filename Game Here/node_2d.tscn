@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4cnyhayoumdj"]
+[gd_scene load_steps=3 format=3 uid="uid://b4cnyhayoumdj"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_wtn3k"]
+[ext_resource type="Script" path="res://node_2d.gd" id="1_5dxuv"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_o2nem"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_wtn3k")
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_5dxuv")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o2nem")
