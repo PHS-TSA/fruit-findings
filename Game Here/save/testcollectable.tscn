@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjigdwmb8lt2d"]
 
-[ext_resource type="Texture2D" uid="uid://d1ikrvxtp05mi" path="res://icon.svg" id="1_3xu6k"]
-[ext_resource type="Script" path="res://testcollectable.gd" id="1_tyj55"]
+[ext_resource type="Script" path="res://testcollectable.gd" id="1_m34n4"]
+[ext_resource type="Texture2D" uid="uid://d1ikrvxtp05mi" path="res://icon.svg" id="2_621uq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yetcd"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_3xu6k")
+"texture": ExtResource("2_621uq")
 }],
 "loop": true,
 "name": &"new_animation",
@@ -18,7 +18,7 @@ animations = [{
 size = Vector2(67, 62)
 
 [node name="Area2D" type="Area2D"]
-script = ExtResource("1_tyj55")
+script = ExtResource("1_m34n4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-29, 33.5)
