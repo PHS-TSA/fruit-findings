@@ -33,3 +33,5 @@ func _physics_process(delta: float) -> void:
 	
 	var isleft = velocity.x < 0
 	animated_sprite_2d.flip_h = isleft
+	
+	

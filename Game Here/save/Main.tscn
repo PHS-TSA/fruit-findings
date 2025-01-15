@@ -554,7 +554,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 6.0
-offset_right = 1152.0
+offset_right = 1146.0
 offset_bottom = 658.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -571,9 +571,6 @@ layer_0/tile_data = PackedInt32Array(851968, 1, 6, 786433, 458753, 1, 851969, 65
 [node name="Player" parent="." instance=ExtResource("1_u8fys")]
 position = Vector2(1080, 200)
 scale = Vector2(3, 3)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(579, 328)
 
 [node name="GameManager" parent="." instance=ExtResource("6_yq3yj")]
 unique_name_in_owner = true
@@ -601,12 +598,15 @@ text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Menu" type="Button" parent="."]
+[node name="Menu" type="Button" parent="UI"]
 offset_left = 905.0
 offset_top = 556.0
 offset_right = 1108.0
-offset_bottom = 626.0
+offset_bottom = 627.0
 theme_override_font_sizes/font_size = 45
 text = "Menu"
 
-[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 328)
+
+[connection signal="pressed" from="UI/Menu" to="." method="_on_menu_pressed"]
