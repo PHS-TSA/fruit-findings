@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1piunv4eyaxw"]
+[gd_scene load_steps=9 format=3 uid="uid://ch7to30uxaant"]
 
-[ext_resource type="Script" path="res://save/main.gd" id="1_00y2g"]
-[ext_resource type="PackedScene" uid="uid://c5df6aa61u0v" path="res://save/Player.tscn" id="1_u8fys"]
-[ext_resource type="Texture2D" uid="uid://qta5l2kmvv8u" path="res://Free/Background/Green.png" id="1_vtncp"]
-[ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="3_msmfp"]
-[ext_resource type="PackedScene" uid="uid://30p2lbo1ycnv" path="res://save/game_manager.tscn" id="6_yq3yj"]
+[ext_resource type="Script" path="res://save/main.gd" id="1_y0bx1"]
+[ext_resource type="Texture2D" uid="uid://cut40k3db02ox" path="res://Free/Background/Yellow.png" id="2_swd7f"]
+[ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="3_d4pm1"]
+[ext_resource type="PackedScene" uid="uid://c5df6aa61u0v" path="res://save/Player.tscn" id="4_yuxvc"]
+[ext_resource type="PackedScene" uid="uid://30p2lbo1ycnv" path="res://save/game_manager.tscn" id="5_b8qnk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdj32"]
-texture = ExtResource("3_msmfp")
+texture = ExtResource("3_d4pm1")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -298,7 +298,7 @@ texture = ExtResource("3_msmfp")
 20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0f0g"]
-texture = ExtResource("3_msmfp")
+texture = ExtResource("3_d4pm1")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -545,7 +545,7 @@ sources/1 = SubResource("TileSetAtlasSource_jdj32")
 sources/2 = SubResource("TileSetAtlasSource_d0f0g")
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_00y2g")
+script = ExtResource("1_y0bx1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -558,7 +558,7 @@ offset_right = 1152.0
 offset_bottom = 658.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_vtncp")
+texture = ExtResource("2_swd7f")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -568,15 +568,14 @@ tile_set = SubResource("TileSet_j4kw2")
 format = 2
 layer_0/tile_data = PackedInt32Array(851968, 1, 6, 786433, 458753, 1, 851969, 65537, 6, 786434, 524289, 1, 851970, 65537, 6, 786435, 393217, 1, 851971, 65537, 6, 786436, 458753, 1, 851972, 65537, 6, 786437, 524289, 1, 851973, 65537, 6, 786439, 458753, 1, 851975, 65537, 6, 786440, 524289, 1, 851976, 65537, 6, 786441, 393217, 1, 851977, 65537, 6, 786438, 393217, 1, 851974, 65537, 6, 786442, 458753, 1, 851978, 65537, 6, 786443, 524289, 1, 851979, 65537, 6, 786444, 393217, 1, 851980, 65537, 6, 786445, 458753, 1, 851981, 65537, 6, 786446, 524289, 1, 851982, 65537, 6, 720911, 393217, 0, 786447, 393217, 1, 720912, 458753, 0, 786448, 458753, 1, 720913, 524289, 0, 786449, 524289, 1, 720908, 393217, 0, 720909, 458753, 0, 720910, 524289, 0, 720905, 393217, 0, 720906, 458753, 0, 720907, 524289, 0, 720902, 393217, 0, 720903, 458753, 0, 720904, 524289, 0, 720899, 393217, 0, 720900, 458753, 0, 720901, 524289, 0, 720897, 458753, 0, 720898, 524289, 0, 720914, 393217, 0, 786450, 393217, 1, 720915, 458753, 0, 786451, 458753, 1, 720916, 524289, 0, 786452, 524289, 1, 720917, 393217, 0, 786453, 393217, 1, 720918, 458753, 0, 786454, 458753, 1, 720919, 131073, 5, 786455, 131073, 5, 851983, 65537, 6, 851984, 65537, 6, 851985, 65537, 6, 851986, 65537, 6, 851987, 65537, 6, 851988, 65537, 6, 851989, 65537, 6, 851990, 65537, 6, 1, 65537, 4, 2, 65537, 4, 3, 65537, 4, 4, 65537, 4, 5, 65537, 4, 6, 65537, 4, 7, 65537, 4, 8, 65537, 4, 9, 65537, 4, 10, 65537, 4, 11, 65537, 4, 12, 65537, 4, 13, 65537, 4, 14, 65537, 4, 15, 65537, 4, 16, 65537, 4, 17, 65537, 4, 18, 65537, 4, 19, 65537, 4, 20, 65537, 4, 21, 65537, 4, 22, 65537, 4, 65559, 131073, 5, 131095, 131073, 5, 196631, 131073, 5, 262167, 131073, 5, 327703, 131073, 5, 393239, 131073, 5, 458775, 131073, 5, 524311, 131073, 5, 589847, 131073, 5, 655383, 131073, 5, 65536, 1, 5, 131072, 1, 5, 196608, 1, 5, 262144, 1, 5, 327680, 1, 5, 393216, 1, 5, 458752, 1, 5, 524288, 1, 5, 589824, 1, 5, 655360, 1, 5, 720896, 1, 5, 0, 1, 4, 786432, 1, 5, 851991, 131073, 6, 23, 131073, 4)
 
-[node name="Player" parent="." instance=ExtResource("1_u8fys")]
+[node name="Player" parent="." instance=ExtResource("4_yuxvc")]
 position = Vector2(1080, 200)
 scale = Vector2(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 328)
 
-[node name="GameManager" parent="." instance=ExtResource("6_yq3yj")]
-unique_name_in_owner = true
+[node name="GameManager" parent="." instance=ExtResource("5_b8qnk")]
 position = Vector2(1056, 96)
 
 [node name="UI" type="CanvasGroup" parent="."]
@@ -600,13 +599,3 @@ theme_override_font_sizes/font_size = 50
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Menu" type="Button" parent="."]
-offset_left = 905.0
-offset_top = 556.0
-offset_right = 1108.0
-offset_bottom = 626.0
-theme_override_font_sizes/font_size = 45
-text = "Menu"
-
-[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

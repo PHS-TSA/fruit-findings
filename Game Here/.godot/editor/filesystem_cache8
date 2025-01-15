@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733950461
+::res://::1736974687
 character_body_2d.gd::GDScript::-1::1733345243::0::1::::<>CharacterBody2D<>::
-game_manager.gd::GDScript::-1::1733354413::0::1::::<>Node2D<>::
+game_manager.gd::GDScript::-1::1733958218::0::1::::GameManager<>Node2D<>::
 icon.svg::CompressedTexture2D::9001325675529861616::1729088856::1730220835::1::::<><>::
 node_2d.gd::GDScript::-1::1732569407::0::1::::<>Area2D<>::
 node_2d.tscn::PackedScene::4426858453437251231::1733345244::0::1::::<><>::res://node_2d.gd
@@ -232,9 +232,9 @@ Idle.png::CompressedTexture2D::7181204418746547008::1729680148::1730220835::1:::
 ::res://Free/Traps/Trampoline/::1730220835
 Idle.png::CompressedTexture2D::191654285577222018::1729680148::1730220835::1::::<><>::
 Jump (28x28).png::CompressedTexture2D::5505856663351171397::1729680148::1730220835::1::::<><>::
-::res://save/::1733710873
-apple.gd::GDScript::-1::1733521169::0::1::::<>Area2D<>::
-Apple.tscn::PackedScene::6190904965455276441::1733521260::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/apple.gd
+::res://save/::1736974687
+apple.gd::GDScript::-1::1736974317::0::1::::<>Node2D<>::
+Apple.tscn::PackedScene::6190904965455276441::1736974317::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/apple.gd
 area_2d.gd::GDScript::-1::1732567851::0::1::::<>Area2D<>::
 background.tscn::PackedScene::4079474316726175953::1731530615::0::1::::<><>::uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png
 character_body_2d.gd::GDScript::-1::1732140521::0::1::::<>CharacterBody2D<>::
@@ -242,10 +242,11 @@ fruit.gd::GDScript::-1::1731530615::0::1::::<>CharacterBody2D<>::
 fruit.tscn::PackedScene::4896524693389371285::1731534850::0::1::::<><>::uid://c5oh53j0743tj::::res://Free/Items/Fruits/Apple.png<>res://save/fruit.gd
 fruit_spawn.tscn::PackedScene::6621475301742598087::1730944976::0::1::::<><>::
 fruit_spawner.tscn::PackedScene::6833067491716393254::1730950915::0::1::::<><>::res://timer.gd
-game_manager.tscn::PackedScene::2017856617016773047::1733521263::0::1::::<><>::res://game_manager.gd
-main.gd::GDScript::-1::1733520740::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::4242818452981430660::1733521263::0::1::::<><>::uid://c5df6aa61u0v::::res://save/Player.tscn<>uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png<>uid://cug6khee8tcdd::::res://save/Apple.tscn<>uid://30p2lbo1ycnv::::res://save/game_manager.tscn
+game_manager.tscn::PackedScene::2017856617016773047::1736974317::0::1::::<><>::res://game_manager.gd
+Level 2.tscn::PackedScene::5366397119918542963::1736974682::0::1::::<><>::res://save/main.gd<>uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png<>uid://c5df6aa61u0v::::res://save/Player.tscn<>uid://30p2lbo1ycnv::::res://save/game_manager.tscn
+main.gd::GDScript::-1::1733957206::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::4242818452981430660::1736974317::0::1::::<><>::res://save/main.gd<>uid://c5df6aa61u0v::::res://save/Player.tscn<>uid://qta5l2kmvv8u::::res://Free/Background/Green.png<>uid://dtg32ws1jy26p::::res://Free/Terrain/Terrain (16x16).png<>uid://30p2lbo1ycnv::::res://save/game_manager.tscn
 node_2d.tscn::PackedScene::5250518155713698586::1730925489::0::1::::<><>::
 Player.gd::GDScript::-1::1732219493::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::202501728112008695::1733521264::0::1::::<><>::res://save/player.gd<>uid://djhpvioutlayw::::res://Free/Main Characters/Virtual Guy/Idle (32x32).png<>uid://60pbd7sicah::::res://Free/Main Characters/Virtual Guy/Jump (32x32).png<>uid://sbealox0yqgc::::res://Free/Main Characters/Virtual Guy/Fall (32x32).png<>uid://cdi3i7iya7m0c::::res://Free/Main Characters/Virtual Guy/Run (32x32).png
-testcollectable.tscn::PackedScene::3035006131947530093::1733521037::0::1::::<><>::res://testcollectable.gd<>uid://d1ikrvxtp05mi::::res://icon.svg
+Player.tscn::PackedScene::202501728112008695::1736974317::0::1::::<><>::res://save/player.gd<>uid://djhpvioutlayw::::res://Free/Main Characters/Virtual Guy/Idle (32x32).png<>uid://60pbd7sicah::::res://Free/Main Characters/Virtual Guy/Jump (32x32).png<>uid://sbealox0yqgc::::res://Free/Main Characters/Virtual Guy/Fall (32x32).png<>uid://cdi3i7iya7m0c::::res://Free/Main Characters/Virtual Guy/Run (32x32).png
+testcollectable.tscn::PackedScene::3035006131947530093::1736974317::0::1::::<><>::res://testcollectable.gd<>uid://d1ikrvxtp05mi::::res://icon.svg
