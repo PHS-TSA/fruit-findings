@@ -15,14 +15,6 @@ grow_vertical = 2
 texture = ExtResource("2_ivxd7")
 stretch_mode = 1
 
-[node name="level2" type="Button" parent="."]
-offset_left = 494.0
-offset_top = 377.0
-offset_right = 659.0
-offset_bottom = 446.0
-theme_override_font_sizes/font_size = 29
-text = "Level 2"
-
 [node name="start" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -39,5 +31,4 @@ theme_override_colors/font_color = Color(0.187103, 0.552043, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Start!"
 
-[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]

@@ -17,7 +17,8 @@ func _on_timer_timeout():
 	apple.player_collected_apple.connect(game_manager._on_apple_player_collected_apple)
 	add_child(apple)
 
-func _on_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://save/Main_Menu.tscn")
+func _on_melon_pressed() -> void:
+	get_tree().change_scene_to_file("res://obby.tscn")
 
-#a
+func _on_cherry_pressed() -> void:
+	get_tree().change_scene_to_file("res://pop_up.tscn")

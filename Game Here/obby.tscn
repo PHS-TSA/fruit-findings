@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1piunv4eyaxw"]
+[gd_scene load_steps=10 format=3 uid="uid://3i63xlqu53i"]
 
-[ext_resource type="Script" path="res://save/main.gd" id="1_00y2g"]
-[ext_resource type="PackedScene" uid="uid://c5df6aa61u0v" path="res://save/Player.tscn" id="1_u8fys"]
-[ext_resource type="Texture2D" uid="uid://qta5l2kmvv8u" path="res://Free/Background/Green.png" id="1_vtncp"]
-[ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="3_msmfp"]
-[ext_resource type="PackedScene" uid="uid://30p2lbo1ycnv" path="res://save/game_manager.tscn" id="6_yq3yj"]
+[ext_resource type="Script" path="res://obby.gd" id="1_hfymh"]
+[ext_resource type="Texture2D" uid="uid://cut40k3db02ox" path="res://Free/Background/Yellow.png" id="1_syogf"]
+[ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="2_utowa"]
+[ext_resource type="PackedScene" uid="uid://c5df6aa61u0v" path="res://save/Player.tscn" id="3_d7wjj"]
+[ext_resource type="Script" path="res://m_game_manager.gd" id="6_mglic"]
+[ext_resource type="PackedScene" uid="uid://cjw83bkya8s4p" path="res://melon.tscn" id="6_x37ek"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdj32"]
-texture = ExtResource("3_msmfp")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xn883"]
+texture = ExtResource("2_utowa")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -297,8 +298,8 @@ texture = ExtResource("3_msmfp")
 20:10/0 = 0
 20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0f0g"]
-texture = ExtResource("3_msmfp")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6rx8"]
+texture = ExtResource("2_utowa")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -539,56 +540,55 @@ texture = ExtResource("3_msmfp")
 20:1/0 = 0
 20:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_j4kw2"]
+[sub_resource type="TileSet" id="TileSet_cbnyd"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_jdj32")
-sources/2 = SubResource("TileSetAtlasSource_d0f0g")
+sources/1 = SubResource("TileSetAtlasSource_xn883")
+sources/2 = SubResource("TileSetAtlasSource_b6rx8")
 
-[node name="Main" type="Node2D"]
-script = ExtResource("1_00y2g")
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hfymh")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 6.0
-offset_right = 1146.0
-offset_bottom = 658.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_vtncp")
+offset_right = 3175.0
+offset_bottom = 677.0
+texture = ExtResource("1_syogf")
 stretch_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-2, 0)
+position = Vector2(2, 6)
 scale = Vector2(3, 3)
-tile_set = SubResource("TileSet_j4kw2")
+tile_set = SubResource("TileSet_cbnyd")
 format = 2
-layer_0/tile_data = PackedInt32Array(851968, 1, 6, 786433, 458753, 1, 851969, 65537, 6, 786434, 524289, 1, 851970, 65537, 6, 786435, 393217, 1, 851971, 65537, 6, 786436, 458753, 1, 851972, 65537, 6, 786437, 524289, 1, 851973, 65537, 6, 786439, 458753, 1, 851975, 65537, 6, 786440, 524289, 1, 851976, 65537, 6, 786441, 393217, 1, 851977, 65537, 6, 786438, 393217, 1, 851974, 65537, 6, 786442, 458753, 1, 851978, 65537, 6, 786443, 524289, 1, 851979, 65537, 6, 786444, 393217, 1, 851980, 65537, 6, 786445, 458753, 1, 851981, 65537, 6, 786446, 524289, 1, 851982, 65537, 6, 720911, 393217, 0, 786447, 393217, 1, 720912, 458753, 0, 786448, 458753, 1, 720913, 524289, 0, 786449, 524289, 1, 720908, 393217, 0, 720909, 458753, 0, 720910, 524289, 0, 720905, 393217, 0, 720906, 458753, 0, 720907, 524289, 0, 720902, 393217, 0, 720903, 458753, 0, 720904, 524289, 0, 720899, 393217, 0, 720900, 458753, 0, 720901, 524289, 0, 720897, 458753, 0, 720898, 524289, 0, 720914, 393217, 0, 786450, 393217, 1, 720915, 458753, 0, 786451, 458753, 1, 720916, 524289, 0, 786452, 524289, 1, 720917, 393217, 0, 786453, 393217, 1, 720918, 458753, 0, 786454, 458753, 1, 720919, 131073, 5, 786455, 131073, 5, 851983, 65537, 6, 851984, 65537, 6, 851985, 65537, 6, 851986, 65537, 6, 851987, 65537, 6, 851988, 65537, 6, 851989, 65537, 6, 851990, 65537, 6, 1, 65537, 4, 2, 65537, 4, 3, 65537, 4, 4, 65537, 4, 5, 65537, 4, 6, 65537, 4, 7, 65537, 4, 8, 65537, 4, 9, 65537, 4, 10, 65537, 4, 11, 65537, 4, 12, 65537, 4, 13, 65537, 4, 14, 65537, 4, 15, 65537, 4, 16, 65537, 4, 17, 65537, 4, 18, 65537, 4, 19, 65537, 4, 20, 65537, 4, 21, 65537, 4, 22, 65537, 4, 65559, 131073, 5, 131095, 131073, 5, 196631, 131073, 5, 262167, 131073, 5, 327703, 131073, 5, 393239, 131073, 5, 458775, 131073, 5, 524311, 131073, 5, 589847, 131073, 5, 655383, 131073, 5, 65536, 1, 5, 131072, 1, 5, 196608, 1, 5, 262144, 1, 5, 327680, 1, 5, 393216, 1, 5, 458752, 1, 5, 524288, 1, 5, 589824, 1, 5, 655360, 1, 5, 720896, 1, 5, 0, 1, 4, 786432, 1, 5, 851991, 131073, 6, 23, 131073, 4)
+layer_0/tile_data = PackedInt32Array(851968, 1, 6, 786433, 458753, 9, 851969, 65537, 6, 786434, 458753, 9, 851970, 65537, 6, 786435, 458753, 9, 851971, 65537, 6, 786436, 458753, 9, 851972, 65537, 6, 786437, 458753, 9, 851973, 65537, 6, 786439, 458753, 9, 851975, 65537, 6, 786440, 458753, 9, 851976, 65537, 6, 786441, 458753, 9, 851977, 65537, 6, 786438, 458753, 9, 851974, 65537, 6, 786442, 458753, 9, 851978, 65537, 6, 786443, 458753, 9, 851979, 65537, 6, 786444, 458753, 9, 851980, 65537, 6, 786445, 458753, 9, 851981, 65537, 6, 786446, 458753, 9, 851982, 65537, 6, 720911, 458753, 8, 786447, 458753, 9, 720912, 458753, 8, 786448, 458753, 9, 720913, 458753, 8, 786449, 458753, 9, 720908, 458753, 8, 720909, 458753, 8, 720910, 458753, 8, 720905, 458753, 8, 720906, 458753, 8, 720907, 458753, 8, 720902, 458753, 8, 720903, 458753, 8, 720904, 458753, 8, 720899, 458753, 9, 720900, 393217, 8, 720901, 458753, 8, 720897, 458753, 9, 720898, 458753, 9, 720914, 458753, 8, 786450, 458753, 9, 720915, 458753, 8, 786451, 458753, 9, 720916, 458753, 8, 786452, 458753, 9, 720917, 458753, 8, 786453, 458753, 9, 720918, 458753, 8, 786454, 458753, 9, 851983, 65537, 6, 851984, 65537, 6, 851985, 65537, 6, 851986, 65537, 6, 851987, 65537, 6, 851988, 65537, 6, 851989, 65537, 6, 851990, 65537, 6, 1, 65537, 4, 2, 65537, 4, 3, 65537, 4, 4, 65537, 4, 5, 65537, 4, 6, 65537, 4, 7, 65537, 4, 8, 65537, 4, 9, 65537, 4, 10, 65537, 4, 11, 65537, 4, 12, 65537, 4, 13, 65537, 4, 14, 65537, 4, 15, 65537, 4, 16, 65537, 4, 17, 65537, 4, 18, 65537, 4, 19, 65537, 4, 20, 65537, 4, 21, 65537, 4, 22, 65537, 4, 65536, 1, 5, 131072, 1, 5, 196608, 1, 5, 262144, 1, 5, 327680, 1, 5, 393216, 1, 5, 458752, 1, 5, 524288, 1, 5, 589824, 1, 5, 655360, 1, 5, 720896, 1, 5, 0, 1, 4, 786432, 1, 5, 65, 131073, 4, 852033, 131073, 6, 851991, 65537, 6, 851992, 65537, 6, 851993, 65537, 6, 851994, 65537, 6, 851995, 65537, 6, 851996, 65537, 6, 851997, 65537, 6, 851998, 65537, 6, 851999, 65537, 6, 852000, 65537, 6, 852001, 65537, 6, 852002, 65537, 6, 852003, 65537, 6, 852004, 65537, 6, 852005, 65537, 6, 852006, 65537, 6, 852007, 65537, 6, 852008, 65537, 6, 852009, 65537, 6, 852010, 65537, 6, 852011, 65537, 6, 852012, 65537, 6, 852013, 65537, 6, 852014, 65537, 6, 852015, 65537, 6, 852016, 65537, 6, 852017, 65537, 6, 852018, 65537, 6, 852019, 65537, 6, 852020, 65537, 6, 852021, 65537, 6, 852022, 65537, 6, 852023, 65537, 6, 852024, 65537, 6, 852025, 65537, 6, 852026, 65537, 6, 852027, 65537, 6, 852028, 65537, 6, 852029, 65537, 6, 852030, 65537, 6, 852031, 65537, 6, 852032, 65537, 6, 23, 65537, 4, 24, 65537, 4, 25, 65537, 4, 26, 65537, 4, 27, 65537, 4, 28, 65537, 4, 29, 65537, 4, 30, 65537, 4, 31, 65537, 4, 32, 65537, 4, 33, 65537, 4, 34, 65537, 4, 35, 65537, 4, 36, 65537, 4, 37, 65537, 4, 38, 65537, 4, 39, 65537, 4, 44, 65537, 4, 45, 65537, 4, 46, 65537, 4, 43, 65537, 4, 42, 65537, 4, 41, 65537, 4, 40, 65537, 4, 47, 65537, 4, 48, 65537, 4, 49, 65537, 4, 50, 65537, 4, 51, 65537, 4, 52, 65537, 4, 53, 65537, 4, 54, 65537, 4, 55, 65537, 4, 56, 65537, 4, 57, 65537, 4, 58, 65537, 4, 63, 65537, 4, 64, 65537, 4, 62, 65537, 4, 61, 65537, 4, 60, 65537, 4, 59, 65537, 4, 65601, 131073, 5, 131137, 131073, 5, 196673, 131073, 5, 262209, 131073, 5, 327745, 131073, 5, 393281, 131073, 5, 458817, 131073, 5, 524353, 131073, 5, 589889, 131073, 5, 655425, 131073, 5, 720961, 131073, 5, 786497, 131073, 5, 720920, 458753, 8, 720919, 458753, 8, 786455, 458753, 9, 786456, 458753, 9, 720921, 458753, 8, 786457, 458753, 9, 720922, 458753, 8, 786458, 458753, 9, 720923, 458753, 8, 786459, 458753, 9, 720924, 458753, 8, 786460, 458753, 9, 720925, 458753, 8, 786461, 458753, 9, 720926, 458753, 8, 786462, 458753, 9, 720927, 458753, 8, 786463, 458753, 9, 720928, 458753, 8, 786464, 458753, 9, 720929, 458753, 8, 786465, 458753, 9, 720930, 458753, 8, 786466, 458753, 9, 720931, 458753, 8, 786467, 458753, 9, 720932, 458753, 8, 786468, 458753, 9, 720933, 458753, 8, 786469, 458753, 9, 720934, 458753, 8, 786470, 458753, 9, 720935, 458753, 8, 786471, 458753, 9, 720936, 458753, 8, 786472, 458753, 9, 720937, 458753, 8, 786473, 458753, 9, 720938, 458753, 8, 786474, 458753, 9, 720939, 458753, 8, 786475, 458753, 9, 720940, 458753, 8, 786476, 458753, 9, 720941, 458753, 8, 786477, 458753, 9, 720942, 458753, 8, 786478, 458753, 9, 720943, 458753, 8, 786479, 458753, 9, 720944, 458753, 8, 786480, 458753, 9, 720945, 458753, 8, 786481, 458753, 9, 720946, 458753, 8, 786482, 458753, 9, 720947, 458753, 8, 786483, 458753, 9, 720948, 458753, 8, 786484, 458753, 9, 720949, 458753, 8, 786485, 458753, 9, 720950, 458753, 8, 786486, 458753, 9, 720951, 458753, 8, 786487, 458753, 9, 720952, 458753, 8, 786488, 458753, 9, 720953, 458753, 8, 786489, 458753, 9, 720954, 458753, 8, 786490, 458753, 9, 720955, 458753, 8, 786491, 458753, 9, 720956, 458753, 8, 786492, 458753, 9, 720957, 458753, 8, 786493, 458753, 9, 720958, 393217, 8, 786494, 458753, 9, 720959, 458753, 9, 786495, 458753, 9, 720960, 458753, 9, 786496, 458753, 9, 524302, 393217, 8, 524303, 458753, 9, 524304, 458753, 9, 524305, 458753, 9, 524306, 458753, 8, 524307, 524289, 8, 393238, 393217, 8, 393239, 458753, 8, 393240, 524289, 8, 393244, 393217, 8, 393245, 458753, 8, 393246, 524289, 8, 393250, 393217, 8, 393251, 458753, 8, 393252, 524289, 8, 262183, 393217, 8, 262184, 458753, 8, 262185, 524289, 8, 262186, 393217, 8, 327722, 393217, 8, 393258, 393217, 10, 327723, 524289, 8, 393259, 393217, 8, 458795, 393217, 10, 393260, 524289, 8, 458796, 524289, 9, 524332, 524289, 10, 524333, 393217, 8, 524334, 458753, 8, 524335, 524289, 8, 262145, 393217, 8, 262146, 458753, 8, 262147, 524289, 8, 196633, 393217, 8, 196634, 458753, 8, 196635, 524289, 8, 196639, 393217, 8, 196640, 458753, 8, 196641, 524289, 8, 524338, 393217, 8, 393270, 393217, 8, 393271, 524289, 8, 262206, 458753, 8, 262207, 458753, 8, 262208, 458753, 8, 655417, 393217, 8, 589882, 393217, 8, 655418, 393217, 9, 524347, 393217, 8, 589883, 393217, 9, 655419, 458753, 9, 655420, 393217, 8, 589887, 458753, 8, 655423, 393217, 8, 589888, 393217, 9, 655424, 458753, 9, 655422, 458753, 8, 655397, 458753, 9, 655398, 458753, 9, 589862, 458753, 8, 589863, 524289, 8, 655399, 458753, 8, 655400, 524289, 8, 458767, 458753, 8, 458768, 458753, 8, 458769, 458753, 8, 458770, 458753, 8, 524289, 458753, 8, 589826, 458753, 8, 655363, 458753, 8, 524290, 458753, 8, 458754, 458753, 8, 655362, 458753, 9, 655361, 458753, 9, 589825, 458753, 9, 458775, 458753, 10, 458776, 458753, 10, 458777, 393217, 8, 458774, 393217, 8, 327720, 458753, 10, 327721, 458753, 9, 327719, 393217, 10, 393257, 393217, 10, 327740, 393217, 10, 327741, 458753, 10, 327742, 458753, 9, 327744, 458753, 9, 327743, 458753, 9, 393278, 393217, 10, 393279, 458753, 9, 458815, 393217, 10, 458816, 458753, 9, 524352, 393217, 9, 393280, 458753, 9, 262202, 393217, 8, 262203, 458753, 8, 262204, 458753, 8, 262205, 458753, 8, 524339, 524289, 8, 393222, 458753, 8, 393221, 393217, 8, 393223, 524289, 8)
 
-[node name="Player" parent="." instance=ExtResource("1_u8fys")]
-position = Vector2(354, 492)
+[node name="Player" parent="." instance=ExtResource("3_d7wjj")]
+position = Vector2(508, 477)
 scale = Vector2(3, 3)
 
-[node name="UI" type="CanvasGroup" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(22.6667, -42.6667)
+scale = Vector2(0.333333, 0.333333)
 
-[node name="Panel" type="Panel" parent="UI"]
-offset_left = 41.0
-offset_top = 527.0
-offset_right = 383.0
-offset_bottom = 624.0
-metadata/_edit_use_anchors_ = true
+[node name="UI" type="CanvasGroup" parent="Player"]
+position = Vector2(-164, -154.333)
+scale = Vector2(0.333333, 0.333333)
 
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
+[node name="Panel" type="Panel" parent="Player/UI"]
+offset_left = 26.0
+offset_top = 531.0
+offset_right = 368.0
+offset_bottom = 628.0
+
+[node name="PointsLabel" type="Label" parent="Player/UI/Panel"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.181287
+anchor_top = 0.154639
+anchor_right = 0.783626
+anchor_bottom = 0.865979
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(0.783781, 0.957824, 0.570471, 1)
 theme_override_font_sizes/font_size = 50
 text = "Points: 0"
@@ -596,38 +596,40 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Cherry" type="Button" parent="UI/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.568
-anchor_bottom = 0.5
-offset_left = 677.0
-offset_top = 31.0
-offset_right = 666.744
-offset_bottom = 53.5
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0.948167, 0.516587, 0.702088, 1)
-theme_override_font_sizes/font_size = 45
-text = "Cherry"
-
-[node name="Melon" type="Button" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 864.0
-offset_top = 29.0
-offset_right = 1067.0
-offset_bottom = 100.0
-theme_override_colors/font_color = Color(0.399664, 0.800675, 0.802162, 1)
-theme_override_font_sizes/font_size = 45
-text = "Melon"
+[node name="apple" type="Button" parent="Player/UI"]
+offset_left = 911.0
+offset_top = 520.0
+offset_right = 1091.0
+offset_bottom = 616.0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.947406, 3.77826e-06, 1.73271e-06, 1)
+theme_override_font_sizes/font_size = 40
+text = "Apples"
 metadata/_edit_use_anchors_ = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(571, 330)
+[node name="Cherry" type="Button" parent="Player/UI"]
+offset_left = 685.0
+offset_top = 521.0
+offset_right = 908.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0.94902, 0.517647, 0.701961, 1)
+theme_override_font_sizes/font_size = 45
+text = "Cherry
+"
 
-[node name="GameManager" parent="." instance=ExtResource("6_yq3yj")]
+[node name="m_game_manager" type="Node2D" parent="."]
+script = ExtResource("6_mglic")
+
+[node name="melon" parent="." instance=ExtResource("6_x37ek")]
 unique_name_in_owner = true
-position = Vector2(1056, 96)
+position = Vector2(-67, 53)
 
-[connection signal="pressed" from="UI/Panel/Cherry" to="." method="_on_cherry_pressed"]
-[connection signal="pressed" from="UI/Panel/Melon" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="UI/Panel/Melon" to="." method="_on_melon_pressed"]
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="pressed" from="Player/UI/apple" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Player/UI/apple" to="." method="_on_apple_pressed"]
+[connection signal="pressed" from="Player/UI/Cherry" to="." method="_on_cherry_pressed"]
+[connection signal="body_entered" from="melon" to="." method="_on_melon_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
