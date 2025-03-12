@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="3_msmfp"]
 [ext_resource type="PackedScene" uid="uid://30p2lbo1ycnv" path="res://save/game_manager.tscn" id="6_yq3yj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdj32"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ek08m"]
 texture = ExtResource("3_msmfp")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -297,7 +297,7 @@ texture = ExtResource("3_msmfp")
 20:10/0 = 0
 20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0f0g"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_opi66"]
 texture = ExtResource("3_msmfp")
 0:0/0 = 0
 1:0/0 = 0
@@ -541,8 +541,8 @@ texture = ExtResource("3_msmfp")
 
 [sub_resource type="TileSet" id="TileSet_j4kw2"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_jdj32")
-sources/2 = SubResource("TileSetAtlasSource_d0f0g")
+sources/1 = SubResource("TileSetAtlasSource_ek08m")
+sources/2 = SubResource("TileSetAtlasSource_opi66")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_00y2g")
@@ -620,9 +620,6 @@ theme_override_colors/font_color = Color(0.399664, 0.800675, 0.802162, 1)
 theme_override_font_sizes/font_size = 45
 text = "Melon"
 metadata/_edit_use_anchors_ = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(571, 330)
 
 [node name="GameManager" parent="." instance=ExtResource("6_yq3yj")]
 unique_name_in_owner = true

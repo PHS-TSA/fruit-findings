@@ -1,11 +1,26 @@
 extends Node2D
 
-
 func _on_apple_pressed() -> void:
-	get_tree().change_scene_to_file("res://save/Main.tscn")
+	var cameraT = $Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/Camera2D
+	cameraT.position = Vector2(0,0)
+	cameraT.offset[0] = 10500
+	cameraT.offset[1] = -200
+	cameraT.reparent($Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport)
+	print(cameraT.get_parent())
 
 func _on_cherry_pressed() -> void:
-	get_tree().change_scene_to_file("res://pop_up.tscn")
+	var cameraT = $Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/Camera2D
+	cameraT.position = Vector2(0,0)
+	cameraT.offset[0] = 8500
+	cameraT.offset[1] = -200
+	cameraT.reparent($Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport)
+
+func _on_melon_pressed() -> void:
+	var cameraT = $Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/Camera2D
+	cameraT.position = Vector2(0,0)
+	cameraT.offset[0] = 4500
+	cameraT.offset[1] = -100
+	cameraT.reparent($Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player)
 
 func moveMelon(melon: Area2D) -> void:
 	var dot := Vector2(0, 0)

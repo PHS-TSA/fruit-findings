@@ -1,10 +1,13 @@
 extends Node2D
 @onready var points_label: Label = $"../PointsLabel"
-
-
-var points = 0
+func _ready() -> void:
+	points_label.text = "Points: " + str(Global.points)
 
 func add_point():
-	points +=1
-	print("Points: " + str(points))
-	points_label.text = "Points: " + str(points)
+	Global.points += 1
+	print("Points: " + str(Global.points))
+	points_label.text = "Points: " + str(Global.points)
+	if Global.points % 10 == 0:
+		Global.level = Global.points/10 + 1
+		Global.levelLabel.text = "Level: " + str(Global.level)
+	Global.held_food = "C"

@@ -18,10 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Obby="*res://obby.gd"
+Global="*res://global_script.gd"
 
 [display]
 
-window/size/viewport_width=1146
+window/size/viewport_width=1150
+window/size/viewport_height=1300
 window/stretch/mode="canvas_items"
 
 [editor]

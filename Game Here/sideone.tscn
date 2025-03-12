@@ -5,21 +5,3 @@
 [node name="sideone" type="Node2D"]
 
 [node name="Main" parent="." instance=ExtResource("1_b6mx4")]
-
-[node name="fruitpoints" type="Node2D" parent="."]
-
-[node name="applepoint" type="Label" parent="fruitpoints"]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="melonpoint" type="Label" parent="fruitpoints"]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="cherrypoint" type="Label" parent="fruitpoints"]
-offset_left = 45.0
-offset_top = 48.0
-offset_right = 221.0
-offset_bottom = 113.0
-theme_override_font_sizes/font_size = 42
-text = "Cherries: 0"

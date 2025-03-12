@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="6_5sfhj"]
 [ext_resource type="PackedScene" uid="uid://bg6vhwghlrvyd" path="res://cherry.tscn" id="7_3igux"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgkxj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j82ee"]
 texture = ExtResource("6_5sfhj")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -357,7 +357,7 @@ texture = ExtResource("6_5sfhj")
 
 [sub_resource type="TileSet" id="TileSet_as33k"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_fgkxj")
+sources/0 = SubResource("TileSetAtlasSource_j82ee")
 
 [node name="pop_up" type="Node2D"]
 script = ExtResource("1_pciyl")
