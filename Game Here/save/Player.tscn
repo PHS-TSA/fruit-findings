@@ -204,8 +204,8 @@ script = ExtResource("1_q2y41")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-6, -16)
-scale = Vector2(0.95, 0.95)
+position = Vector2(-6, -16.1)
+scale = Vector2(0.936, 0.93)
 sprite_frames = SubResource("SpriteFrames_6lqst")
 animation = &"jumping"
 autoplay = "idle"

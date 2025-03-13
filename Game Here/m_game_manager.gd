@@ -1,6 +1,6 @@
 class_name MGameManager
 extends Node2D
-
+#Assets are CC0: Come crom Pixel Adventure
 @onready var level_label: Label = $"../Player/UI/Panel2/LevelLabel"
 @onready var points_label: Label = $"../Player/UI/Panel/PointsLabel"
 

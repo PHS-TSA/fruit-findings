@@ -4131,7 +4131,8 @@ texture_filter = 1
 position = Vector2(0, -9.99999)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_2tkmr")
-animation = &"apple"
+animation = &"melon"
+autoplay = "melon"
 script = ExtResource("29_leaeo")
 
 [node name="KitchenCamera" type="Camera2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision"]
