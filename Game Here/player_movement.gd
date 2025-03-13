@@ -21,7 +21,9 @@ func _physics_process(delta: float):
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = 500.0*Global.player_speed_mult
 		$KitchenPlayer.animation = "run"
-	elif not (Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right")):
+	else:
+		velocity.y = 0
+	if not (Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
 		if $KitchenPlayer.animation == "run":
 			while $KitchenPlayer.frame < 9:
 				$KitchenPlayer.frame += 1
@@ -30,24 +32,22 @@ func _physics_process(delta: float):
 				$KitchenPlayer.frame += 0
 			$KitchenPlayer.frame = 0
 			$KitchenPlayer.animation = "idle"
-	else:
-		velocity.y = 0
-	if abs(self.position[0]+255)<150 and abs(self.position[1]+675)<150:
+	if abs(self.position[0]+(255-500))<150 and abs(self.position[1]+(675-1000))<150:
 		Global.tables_in_reach[0] = true
 		Global.tables_in_reach[1] = false
 		Global.tables_in_reach[2] = false
 		Global.tables_in_reach[3] = false
-	elif abs(self.position[0]-255)<150 and abs(self.position[1]+675)<150:
+	elif abs(self.position[0]-(255+500))<150 and abs(self.position[1]+(675-1000))<150:
 		Global.tables_in_reach[0] = false
 		Global.tables_in_reach[1] = true
 		Global.tables_in_reach[2] = false
 		Global.tables_in_reach[3] = false
-	elif abs(self.position[0]+255)<150 and abs(self.position[1]+400)<150:
+	elif abs(self.position[0]+(255-500))<150 and abs(self.position[1]+(400-1000))<150:
 		Global.tables_in_reach[0] = false
 		Global.tables_in_reach[1] = false
 		Global.tables_in_reach[2] = true
 		Global.tables_in_reach[3] = false
-	elif abs(self.position[0]-255)<150 and abs(self.position[1]+400)<150:
+	elif abs(self.position[0]-(255+500))<150 and abs(self.position[1]+(400-1000))<150:
 		Global.tables_in_reach[0] = false
 		Global.tables_in_reach[1] = false
 		Global.tables_in_reach[2] = false

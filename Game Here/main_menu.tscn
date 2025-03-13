@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7sp4y02erkyp"]
+[gd_scene load_steps=3 format=3 uid="uid://cfoyqn8id774f"]
 
-[ext_resource type="Script" uid="uid://bs3x73lbhycik" path="res://node_2d.gd" id="1_7vrkn"]
+[ext_resource type="Script" path="res://node_2d.gd" id="1_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://dsvq8dva11c3j" path="res://Free/Background/Purple.png" id="2_fu7sn"]
 
 [node name="Node2D" type="Node2D"]

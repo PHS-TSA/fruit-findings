@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Video Game Design"
-run/main_scene="uid://c7sp4y02erkyp"
-config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://d2cj4uugc0uhp"
+run/main_scene="res://obby.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
 
 [autoload]
 
@@ -65,5 +65,4 @@ down={
 
 [rendering]
 
-textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
