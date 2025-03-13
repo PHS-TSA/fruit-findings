@@ -22,6 +22,7 @@ func _ready() -> void:
 		node.player.add_child(remote_transform)
 	
 	
+	
 	#var viewport1 = $VBoxContainer/SubViewportContainer/SubViewport
 	#var viewport2 = $VBoxContainer/SubViewportContainer2/SubViewport
 	#var camera1 = $VBoxContainer/SubViewportContainer/SubViewport/Player/Camera2D

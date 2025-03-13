@@ -3932,6 +3932,14 @@ text = "Cherry
 "
 metadata/_edit_use_anchors_ = true
 
+[node name="restart" type="Button" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI"]
+offset_left = 925.0
+offset_top = 532.0
+offset_right = 1135.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 50
+text = "Restart"
+
 [node name="m_game_manager" type="Node2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport"]
 script = ExtResource("6_mglic")
 
@@ -4363,6 +4371,7 @@ offset_bottom = 600.0
 
 [connection signal="pressed" from="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI/apple" to="." method="_on_apple_pressed"]
 [connection signal="pressed" from="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI/Cherry" to="." method="_on_cherry_pressed"]
+[connection signal="pressed" from="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI/restart" to="." method="_on_restart_pressed"]
 [connection signal="body_entered" from="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/melon" to="." method="_on_melon_body_entered"]
 [connection signal="timeout" from="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/pop_up/PointsLabel/apple" to="." method="_on_apple_pressed"]
