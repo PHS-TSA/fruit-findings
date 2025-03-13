@@ -51,6 +51,8 @@ jobs:
           clean: true
           persist-credentials: false
           set-safe-directory: true
+          fetch-depth: 1
+          sparse-checkout: Game Here
       - name: 🤖 Set up Godot
         uses: chickensoft-games/setup-godot@1dc3741f474fcf64a3b302d5fdd263010c200866 # v2.0.0
         with:
@@ -92,13 +94,13 @@ jobs:
           clean: true
           persist-credentials: false
           set-safe-directory: true
+          fetch-depth: 1
+          sparse-checkout: server
       - name: ⚙️ Download build
         uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427 # v4.1.4
         with:
           name: build-web
           path: "./Game Here/build"
-      - run: ls -la ./build
-        working-directory: Game Here
       - name: 🔧 Deploy
         uses: denoland/deployctl@612f83df2b874c6908d68de5cf3f36a6538fa8f7 # 1.12.0
         with:
