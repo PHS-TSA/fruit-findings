@@ -1,9 +1,7 @@
+#!/usr/bin/env deno serve --allow-read
 import { serveDir } from "@std/http";
 
-export async function respond(
-  req: Request,
-  dir = "Game Here/build"
-): Promise<Response> {
+export async function respond(req: Request, dir = "build"): Promise<Response> {
   const path = new URL(req.url).pathname;
   const res = await serveDir(req, {
     fsRoot: dir,
@@ -21,6 +19,6 @@ export async function respond(
 
 export default {
   fetch: async (req: Request): Promise<Response> => {
-    return await respond(req);
+    return await respond(req, "Game Here/build");
   },
 } satisfies Deno.ServeDefaultExport;
