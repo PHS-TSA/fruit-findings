@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://c5df6aa61u0v"]
 
-[ext_resource type="Script" path="res://save/player.gd" id="1_q2y41"]
+[ext_resource type="Script" uid="uid://bc6ylnvixrvmu" path="res://save/player.gd" id="1_q2y41"]
 [ext_resource type="Texture2D" uid="uid://djhpvioutlayw" path="res://Free/Main Characters/Virtual Guy/Idle (32x32).png" id="2_58w06"]
 [ext_resource type="Texture2D" uid="uid://60pbd7sicah" path="res://Free/Main Characters/Virtual Guy/Jump (32x32).png" id="2_bx7ug"]
 [ext_resource type="Texture2D" uid="uid://sbealox0yqgc" path="res://Free/Main Characters/Virtual Guy/Fall (32x32).png" id="2_tfp87"]

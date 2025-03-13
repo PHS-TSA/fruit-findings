@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cjw83bkya8s4p"]
 
-[ext_resource type="Script" path="res://melon.gd" id="1_3jd8m"]
+[ext_resource type="Script" uid="uid://b16ypf2q3exe8" path="res://melon.gd" id="1_3jd8m"]
 [ext_resource type="Texture2D" uid="uid://cr21ygx1r1ic3" path="res://Free/Items/Fruits/Melon.png" id="1_4a02t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vil6i"]

@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4l8vgq2lwfgg"]
 
-[ext_resource type="Script" path="res://timer.gd" id="1_3kik3"]
+[sub_resource type="Resource" id="Resource_sm2t0"]
+metadata/__load_path__ = "res://timer.gd"
 
 [node name="FruitSpawner" type="Node2D"]
 
@@ -23,6 +24,6 @@ position = Vector2(1010, 1)
 
 [node name="Timer" type="Timer" parent="Spawner"]
 autostart = true
-script = ExtResource("1_3kik3")
+script = SubResource("Resource_sm2t0")
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner/Timer" method="_on_timeout"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=341 format=3 uid="uid://copwnjg1ek563"]
 
 [ext_resource type="Texture2D" uid="uid://djhpvioutlayw" path="res://Free/Main Characters/Virtual Guy/Idle (32x32).png" id="3_c3npq"]
-[ext_resource type="Script" path="res://player_movement.gd" id="3_f6db8"]
-[ext_resource type="Script" path="res://player_actions.gd" id="3_wjw5a"]
+[ext_resource type="Script" uid="uid://c2frshuai586a" path="res://player_movement.gd" id="3_f6db8"]
+[ext_resource type="Script" uid="uid://c0m6i27hy15mb" path="res://player_actions.gd" id="3_wjw5a"]
 [ext_resource type="Texture2D" uid="uid://cdi3i7iya7m0c" path="res://Free/Main Characters/Virtual Guy/Run (32x32).png" id="4_tahih"]
 [ext_resource type="Texture2D" uid="uid://b6bb8xwoxp8ub" path="res://icon2.svg" id="4_wemj5"]
 [ext_resource type="Texture2D" uid="uid://c5oh53j0743tj" path="res://Free/Items/Fruits/Apple.png" id="5_f6pnw"]
-[ext_resource type="Script" path="res://table_1_indicator_visible_and_texture.gd" id="5_lkd67"]
+[ext_resource type="Script" uid="uid://bilskenvhv02b" path="res://table_1_indicator_visible_and_texture.gd" id="5_lkd67"]
 [ext_resource type="Texture2D" uid="uid://daqmx24m87uwl" path="res://Free/Items/Fruits/Bananas.png" id="6_y1nfg"]
 [ext_resource type="Texture2D" uid="uid://cqk1fsi6grb23" path="res://Free/Items/Fruits/Cherries.png" id="7_6pfli"]
 [ext_resource type="Texture2D" uid="uid://d1iq1mny8uu2v" path="res://Free/Items/Fruits/Kiwi.png" id="8_qn6gj"]
@@ -14,22 +14,21 @@
 [ext_resource type="Texture2D" uid="uid://chicawtb4l7uk" path="res://Free/Items/Fruits/Orange.png" id="10_nk8ls"]
 [ext_resource type="Texture2D" uid="uid://bvmdg50jyrcn8" path="res://Free/Items/Fruits/Pineapple.png" id="11_546bc"]
 [ext_resource type="Texture2D" uid="uid://davr7iq5xr8le" path="res://Free/Items/Fruits/Strawberry.png" id="12_dwydv"]
-[ext_resource type="Script" path="res://held_fruit.gd" id="12_vhp8a"]
-[ext_resource type="Script" path="res://table_2_indicator.gd" id="14_unwp8"]
-[ext_resource type="Script" path="res://table_3_indicator.gd" id="15_ymkxn"]
-[ext_resource type="Script" path="res://table_4_indicator.gd" id="16_l7coq"]
+[ext_resource type="Script" uid="uid://c7tkup8r85equ" path="res://held_fruit.gd" id="12_vhp8a"]
+[ext_resource type="Script" uid="uid://dpcl6kfwy13m8" path="res://table_2_indicator.gd" id="14_unwp8"]
+[ext_resource type="Script" uid="uid://deumeg1i6u0vb" path="res://table_3_indicator.gd" id="15_ymkxn"]
+[ext_resource type="Script" uid="uid://cel6am1r606jo" path="res://table_4_indicator.gd" id="16_l7coq"]
 [ext_resource type="Texture2D" uid="uid://ddflkoiubmx73" path="res://Free/Background/Brown.png" id="18_5osiy"]
 [ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="19_wkiqu"]
 [ext_resource type="Texture2D" uid="uid://cm0i1xcakkoam" path="res://Free/Other/Confetti (16x16).png" id="20_r8rmh"]
-[ext_resource type="Script" path="res://conveyor_belt.gd" id="21_08tbo"]
-[ext_resource type="Script" path="res://table_1_progress_bar.gd" id="22_txv47"]
-[ext_resource type="Script" path="res://table_2_progress_bar.gd" id="23_2p6cn"]
-[ext_resource type="Script" path="res://table_3_progress_bar.gd" id="24_6xr82"]
-[ext_resource type="Script" path="res://table_4_progress_bar.gd" id="25_31fyu"]
-[ext_resource type="Script" path="res://click_table_2.gd" id="27_1uyue"]
-[ext_resource type="Script" path="res://click_table_1.gd" id="27_6qek8"]
-[ext_resource type="Script" path="res://click_table_4.gd" id="27_20phx"]
-[ext_resource type="Script" path="res://click_table_3.gd" id="27_svb7t"]
+[ext_resource type="Script" uid="uid://dvuw5wrhe3qa1" path="res://table_1_progress_bar.gd" id="22_txv47"]
+[ext_resource type="Script" uid="uid://dtx6mivp8yqr8" path="res://table_2_progress_bar.gd" id="23_2p6cn"]
+[ext_resource type="Script" uid="uid://cp1wgbrjl4axn" path="res://table_3_progress_bar.gd" id="24_6xr82"]
+[ext_resource type="Script" uid="uid://b4m1a45cswmpp" path="res://table_4_progress_bar.gd" id="25_31fyu"]
+[ext_resource type="Script" uid="uid://p47xsxa1mwu1" path="res://click_table_2.gd" id="27_1uyue"]
+[ext_resource type="Script" uid="uid://tslqsjvsx7l2" path="res://click_table_1.gd" id="27_6qek8"]
+[ext_resource type="Script" uid="uid://bb1ecqghxujkt" path="res://click_table_4.gd" id="27_20phx"]
+[ext_resource type="Script" uid="uid://b0r4wdm5v6gvp" path="res://click_table_3.gd" id="27_svb7t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oyspd"]
 
@@ -1229,6 +1228,9 @@ animations = [{
 "name": &"confetti",
 "speed": 5.0
 }]
+
+[sub_resource type="Resource" id="Resource_ebxd8"]
+metadata/__load_path__ = "res://conveyor_belt.gd"
 
 [sub_resource type="Theme" id="Theme_si3qk"]
 
@@ -2514,7 +2516,7 @@ position = Vector2(344, 248)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_wvnjk")
 animation = &"confetti"
-script = ExtResource("21_08tbo")
+script = SubResource("Resource_ebxd8")
 
 [node name="WallsCollisions" type="StaticBody2D" parent="."]
 
