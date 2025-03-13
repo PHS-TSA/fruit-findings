@@ -1,5 +1,13 @@
 extends AnimatedSprite2D
 
+func resetTable(num) -> void:
+	Global.table_foods[num] = "N"
+	Global.customer_anger[num] = 0
+	Global.customer_anger_levels[num] = 0
+	Global.tables_active[num] = false
+	Global.held_food = "N"
+	Global.points -= 1
+	Global.change.append("p")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +16,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var tempVar = randi() % int(ceil(5000/(Global.level/3.0)))
-	var tempVar2 = randi() % 3
+	var tempVar2 = 1
+	if Global.table_foods[0] == "N":
+		self.visible = false
 	if tempVar == 500:
 		if not Global.tables_active[1]:
 			self.visible = true
@@ -38,7 +48,7 @@ func _process(delta: float) -> void:
 		if Global.tables_anger_delay[1] >= 60:
 			Global.customer_anger[1] += Global.customer_anger_levels[1]
 			if Global.customer_anger[1] >= 100.0:
-				print("Todo, customer is angry")
+				resetTable(1)
 			Global.tables_anger_delay[1] = 0
 		else:
 			Global.tables_anger_delay[1] += 1

@@ -5,7 +5,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	#self.position[1] = self.position[1]+0.5*sin(0.5*Global.table_indicator_sway)
-	if Global.held_food != "":
+	if Global.held_food not in ["N", ""]:
 		self.visible = true
 	else:
 		self.visible = false

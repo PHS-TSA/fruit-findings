@@ -1,4 +1,4 @@
-[gd_scene load_steps=355 format=3 uid="uid://3i63xlqu53i"]
+[gd_scene load_steps=363 format=3 uid="uid://3i63xlqu53i"]
 
 [ext_resource type="Script" path="res://obby.gd" id="1_hfymh"]
 [ext_resource type="Script" path="res://global_script.gd" id="2_a8srl"]
@@ -43,6 +43,10 @@
 [ext_resource type="Script" path="res://click_table_3.gd" id="31_emhh7"]
 [ext_resource type="Script" path="res://click_table_2.gd" id="32_e80g3"]
 [ext_resource type="Script" path="res://click_table_1.gd" id="33_jefmf"]
+[ext_resource type="Texture2D" uid="uid://d2cj4uugc0uhp" path="res://Free/Items/Boxes/Box3/Idle.png" id="44_cccwb"]
+[ext_resource type="Texture2D" uid="uid://6acf8eytguq7" path="res://Free/Items/Boxes/Box3/Hit (28x24).png" id="45_nmbs8"]
+[ext_resource type="Script" path="res://points_label.gd" id="46_lpemk"]
+[ext_resource type="Script" path="res://level_label.gd" id="47_is313"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xn883"]
 texture = ExtResource("2_utowa")
@@ -1472,6 +1476,8 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_6288n")
 sources/2 = SubResource("TileSetAtlasSource_gj4fh")
 
+[sub_resource type="Theme" id="Theme_3kj2x"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hol3e"]
 atlas = ExtResource("26_el7hq")
 region = Rect2(0, 0, 32, 32)
@@ -2641,8 +2647,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Theme" id="Theme_3kj2x"]
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_phk1d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jhpkw"]
@@ -3792,6 +3796,35 @@ texture = ExtResource("2_utowa")
 [sub_resource type="TileSet" id="TileSet_l8cyg"]
 sources/0 = SubResource("TileSetAtlasSource_1ykaf")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk2f7"]
+atlas = ExtResource("44_cccwb")
+region = Rect2(0, 0, 28, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiuo2"]
+atlas = ExtResource("45_nmbs8")
+region = Rect2(0, 0, 28, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syi1p"]
+atlas = ExtResource("45_nmbs8")
+region = Rect2(28, 0, 28, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h11l8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk2f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiuo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syi1p")
+}],
+"loop": true,
+"name": &"anim",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, 3)
 script = ExtResource("1_hfymh")
@@ -3853,58 +3886,6 @@ offset = Vector2(4500, -100)
 [node name="UI" type="CanvasGroup" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player"]
 position = Vector2(-164, -154.333)
 scale = Vector2(0.333333, 0.333333)
-
-[node name="Panel" type="Panel" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI"]
-z_index = 4096
-offset_left = 26.0
-offset_top = 531.0
-offset_right = 326.0
-offset_bottom = 628.0
-metadata/_edit_use_anchors_ = true
-
-[node name="PointsLabel" type="Label" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.181287
-anchor_top = 0.154639
-anchor_right = 0.783626
-anchor_bottom = 0.865979
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0.783781, 0.957824, 0.570471, 1)
-theme_override_font_sizes/font_size = 50
-text = "Points: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel2" type="Panel" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI"]
-z_index = 4096
-offset_left = 362.5
-offset_top = 531.0
-offset_right = 662.5
-offset_bottom = 628.0
-metadata/_edit_use_anchors_ = true
-
-[node name="LevelLabel" type="Label" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI/Panel2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.181287
-anchor_top = 0.154639
-anchor_right = 0.783626
-anchor_bottom = 0.865979
-offset_left = -79.3861
-offset_top = -35.0
-offset_right = 105.614
-offset_bottom = 35.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0.8, 0.0933334, 1)
-theme_override_font_sizes/font_size = 50
-text = "Level: 1"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="apple" type="Button" parent="Node2D2/Control/VBoxContainer/SubViewportContainer/SubViewport/Player/UI"]
 visible = false
@@ -4109,10 +4090,51 @@ layout_mode = 2
 disable_3d = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(1000, 1750)
+size = Vector2i(1500, 1750)
 render_target_update_mode = 4
 
+[node name="UI" type="CanvasGroup" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2"]
+position = Vector2(0, 3500)
+
+[node name="ProgressBarTable1" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/UI"]
+offset_left = 700.0
+offset_top = -2220.0
+offset_right = 750.0
+offset_bottom = -2140.0
+fill_mode = 3
+script = ExtResource("21_e3ibi")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBarTable2" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/UI"]
+offset_left = 775.0
+offset_top = -2220.0
+offset_right = 825.0
+offset_bottom = -2140.0
+fill_mode = 3
+script = ExtResource("22_kj3nx")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBarTable3" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/UI"]
+offset_left = 700.0
+offset_top = -2120.0
+offset_right = 750.0
+offset_bottom = -2040.0
+fill_mode = 3
+script = ExtResource("23_2y62s")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBarTable4" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/UI"]
+offset_left = 775.0
+offset_top = -2120.0
+offset_right = 825.0
+offset_bottom = -2040.0
+theme = SubResource("Theme_3kj2x")
+fill_mode = 3
+script = ExtResource("24_7ohwj")
+metadata/_edit_use_anchors_ = true
+
 [node name="KitchenPlayerCollision" type="CharacterBody2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2"]
+z_index = 100
 position = Vector2(500, 1350)
 motion_mode = 1
 script = ExtResource("25_bq5aa")
@@ -4136,7 +4158,7 @@ script = ExtResource("29_leaeo")
 
 [node name="KitchenCamera" type="Camera2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision"]
 scale = Vector2(0.999999, 0.999999)
-offset = Vector2(1000, 1750)
+offset = Vector2(1900, 1750)
 zoom = Vector2(0.5, 0.5)
 limit_left = -375
 limit_top = -1850
@@ -4149,46 +4171,6 @@ editor_draw_limits = true
 [node name="KitchenPlayerCollisionShape" type="CollisionPolygon2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision"]
 scale = Vector2(5, 5)
 polygon = PackedVector2Array(-8.46155, -1.53846, 8.46155, -1.53846, 8.46155, 12.3077, -8.46155, 12.3077)
-
-[node name="UI" type="CanvasGroup" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision"]
-position = Vector2(-500, 2150)
-
-[node name="ProgressBarTable1" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision/UI"]
-offset_left = 700.0
-offset_top = -2220.0
-offset_right = 750.0
-offset_bottom = -2140.0
-fill_mode = 3
-script = ExtResource("21_e3ibi")
-metadata/_edit_use_anchors_ = true
-
-[node name="ProgressBarTable2" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision/UI"]
-offset_left = 775.0
-offset_top = -2220.0
-offset_right = 825.0
-offset_bottom = -2140.0
-fill_mode = 3
-script = ExtResource("22_kj3nx")
-metadata/_edit_use_anchors_ = true
-
-[node name="ProgressBarTable3" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision/UI"]
-offset_left = 700.0
-offset_top = -2120.0
-offset_right = 750.0
-offset_bottom = -2040.0
-fill_mode = 3
-script = ExtResource("23_2y62s")
-metadata/_edit_use_anchors_ = true
-
-[node name="ProgressBarTable4" type="ProgressBar" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/KitchenPlayerCollision/UI"]
-offset_left = 775.0
-offset_top = -2120.0
-offset_right = 825.0
-offset_bottom = -2040.0
-theme = SubResource("Theme_3kj2x")
-fill_mode = 3
-script = ExtResource("24_7ohwj")
-metadata/_edit_use_anchors_ = true
 
 [node name="Folder" type="Sprite2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2"]
 position = Vector2(500, 1200)
@@ -4291,58 +4273,79 @@ layer_0/tile_data = PackedInt32Array(196612, 262144, 5, 196611, 65536, 4, 196610
 [node name="WallsCollisions" type="StaticBody2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder"]
 
 [node name="AllOfTheWallsCollisionPolygon" type="CollisionPolygon2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder/WallsCollisions"]
-polygon = PackedVector2Array(-102, -96, -102, -102, -96, -102, -96, -120, -102, -120, -102, -126, -384, -126, -384, -768, 384, -768, -538, -912, -536, 472, 530, 457, 518, -942, 384, -768, 384, -126, 102, -126, 102, -120, 96, -120, 96, -102, 102, -102, 102.036, -96, 384, -96, 384, 288, -384, 288, -384, -96)
+polygon = PackedVector2Array(-102, -96, -102, -102, -96, -102, -96, -120, -102, -120, -102, -126, -384, -126, -384, -768, 384, -768, -538, -912, -536, 472, 530, 457, 518, -942, 384, -768, 384, -126, 102, -126, 102, -120, 96, -120, 96, -102, 102, -102, 102.036, -96, 384, -96, 384, 288, -294, 289, -290, 100, -387, 102, -384, -96)
 
 [node name="ClickTable4" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder"]
+offset_left = 255.0
+offset_top = -400.0
+offset_right = 275.0
+offset_bottom = -380.0
+rotation = 0.785398
 color = Color(0.61, 0.61, 0.61, 0.627451)
 script = ExtResource("30_7rjla")
 metadata/_edit_use_anchors_ = true
 
 [node name="ClickTable4Small" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder/ClickTable4"]
 layout_mode = 0
-offset_left = 10.6066
-offset_top = 10.6066
-offset_right = 30.6066
-offset_bottom = 30.6066
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 15.0
+offset_bottom = 15.0
 color = Color(0.73, 0.73, 0.73, 0.627451)
 
 [node name="ClickTable3" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder"]
+offset_left = -255.0
+offset_top = -400.0
+offset_right = -235.0
+offset_bottom = -380.0
+rotation = 0.785398
 color = Color(0.61, 0.61, 0.61, 0.627451)
 script = ExtResource("31_emhh7")
 metadata/_edit_use_anchors_ = true
 
 [node name="ClickTable3Small" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder/ClickTable3"]
 layout_mode = 0
-offset_left = 10.6066
-offset_top = 10.6066
-offset_right = 30.6066
-offset_bottom = 30.6066
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 15.0
+offset_bottom = 15.0
 color = Color(0.73, 0.73, 0.73, 0.627451)
 
 [node name="ClickTable2" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder"]
+offset_left = 255.0
+offset_top = -675.0
+offset_right = 275.0
+offset_bottom = -655.0
+rotation = 0.785398
 color = Color(0.61, 0.61, 0.61, 0.627451)
 script = ExtResource("32_e80g3")
 metadata/_edit_use_anchors_ = true
 
 [node name="ClickTable2Small" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder/ClickTable2"]
 layout_mode = 0
-offset_left = 10.6066
-offset_top = 10.6066
-offset_right = 30.6066
-offset_bottom = 30.6066
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 15.0
+offset_bottom = 15.0
 color = Color(0.73, 0.73, 0.73, 0.627451)
 
 [node name="ClickTable1" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder"]
+z_index = 100
+offset_left = -255.0
+offset_top = -675.0
+offset_right = -235.0
+offset_bottom = -655.0
+rotation = 0.785398
 color = Color(0.61, 0.61, 0.61, 0.627451)
 script = ExtResource("33_jefmf")
 metadata/_edit_use_anchors_ = true
 
 [node name="ClickTable1Small" type="ColorRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder/ClickTable1"]
 layout_mode = 0
-offset_left = 10.6066
-offset_top = 10.6066
-offset_right = 30.6066
-offset_bottom = 30.6066
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 15.0
+offset_bottom = 15.0
 color = Color(0.73, 0.73, 0.73, 0.627451)
 
 [node name="TextureRect" type="TextureRect" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Folder"]
@@ -4353,6 +4356,68 @@ offset_right = 450.0
 offset_bottom = 300.0
 texture = ExtResource("7_dqmb2")
 stretch_mode = 1
+
+[node name="FridgeQ" type="AnimatedSprite2D" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2"]
+z_index = 5
+texture_filter = 1
+position = Vector2(160, 1400)
+scale = Vector2(5, 10)
+sprite_frames = SubResource("SpriteFrames_h11l8")
+animation = &"anim"
+
+[node name="Panel" type="Panel" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2"]
+z_index = 4096
+offset_left = 1200.0
+offset_top = 531.0
+offset_right = 1500.0
+offset_bottom = 628.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PointsLabel" type="Label" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.181287
+anchor_top = 0.154639
+anchor_right = 0.783626
+anchor_bottom = 0.865979
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.783781, 0.957824, 0.570471, 1)
+theme_override_font_sizes/font_size = 50
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("46_lpemk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2"]
+z_index = 4096
+offset_left = 1200.0
+offset_top = 700.0
+offset_right = 1500.0
+offset_bottom = 797.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelLabel" type="Label" parent="Node2D2/Control/VBoxContainer/SubViewportContainer2/SubViewport2/Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.181287
+anchor_top = 0.154639
+anchor_right = 0.783626
+anchor_bottom = 0.865979
+offset_left = -79.3861
+offset_top = -35.0
+offset_right = 105.614
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.8, 0.0933334, 1)
+theme_override_font_sizes/font_size = 50
+text = "Level: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("47_is313")
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 4100.0
