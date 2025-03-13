@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ch7to30uxaant"]
 
-[ext_resource type="Script" path="res://save/level_2.gd" id="1_8j0m5"]
+[ext_resource type="Script" uid="uid://bgpjisp8ybt65" path="res://save/level_2.gd" id="1_8j0m5"]
 [ext_resource type="Texture2D" uid="uid://cut40k3db02ox" path="res://Free/Background/Yellow.png" id="2_swd7f"]
 [ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="3_d4pm1"]
 [ext_resource type="PackedScene" uid="uid://c5df6aa61u0v" path="res://save/Player.tscn" id="4_yuxvc"]

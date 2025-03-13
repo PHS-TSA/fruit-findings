@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://b5266b7m6stb8"]
 
-[ext_resource type="Script" path="res://pop_up.gd" id="1_pciyl"]
+[ext_resource type="Script" uid="uid://dpbyq1e217ey1" path="res://pop_up.gd" id="1_pciyl"]
 [ext_resource type="Texture2D" uid="uid://dsvq8dva11c3j" path="res://Free/Background/Purple.png" id="2_ba220"]
 [ext_resource type="PackedScene" uid="uid://ccyr7lc7r54r3" path="res://pop_up_character.tscn" id="2_e64tj"]
-[ext_resource type="Script" path="res://c_game_manager.gd" id="4_6ruwd"]
+[ext_resource type="Script" uid="uid://dqfql1fwqbyke" path="res://c_game_manager.gd" id="4_6ruwd"]
 [ext_resource type="Texture2D" uid="uid://dtg32ws1jy26p" path="res://Free/Terrain/Terrain (16x16).png" id="6_5sfhj"]
 [ext_resource type="PackedScene" uid="uid://bg6vhwghlrvyd" path="res://cherry.tscn" id="7_3igux"]
 

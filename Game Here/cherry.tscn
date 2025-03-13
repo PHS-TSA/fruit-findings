@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://bg6vhwghlrvyd"]
 
-[ext_resource type="Script" path="res://cherry.gd" id="1_vf53i"]
+[ext_resource type="Script" uid="uid://bneo2hus6agik" path="res://cherry.gd" id="1_vf53i"]
 [ext_resource type="Texture2D" uid="uid://cqk1fsi6grb23" path="res://Free/Items/Fruits/Cherries.png" id="1_xpqep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ebum8"]

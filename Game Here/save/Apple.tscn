@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://cug6khee8tcdd"]
 
 [ext_resource type="Texture2D" uid="uid://c5oh53j0743tj" path="res://Free/Items/Fruits/Apple.png" id="1_q7cfq"]
-[ext_resource type="Script" path="res://save/apple.gd" id="1_t5w3s"]
+[ext_resource type="Script" uid="uid://18jjpt3s0fnu" path="res://save/apple.gd" id="1_t5w3s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_klcdc"]
 atlas = ExtResource("1_q7cfq")

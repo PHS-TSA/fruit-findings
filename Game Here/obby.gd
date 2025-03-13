@@ -50,3 +50,7 @@ func moveMelon(melon: Area2D) -> void:
 		12:
 			dot = Vector2(2140, -50)
 	melon.global_position = dot
+
+
+func _on_restart_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")
