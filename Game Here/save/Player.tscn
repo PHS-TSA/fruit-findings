@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://c5df6aa61u0v"]
 
-[ext_resource type="Script" uid="uid://bc6ylnvixrvmu" path="res://save/player.gd" id="1_q2y41"]
+[ext_resource type="Script" uid="uid://bc6ylnvixrvmu" path="res://save/Player.gd" id="1_q2y41"]
 [ext_resource type="Texture2D" uid="uid://djhpvioutlayw" path="res://Free/Main Characters/Virtual Guy/Idle (32x32).png" id="2_58w06"]
 [ext_resource type="Texture2D" uid="uid://60pbd7sicah" path="res://Free/Main Characters/Virtual Guy/Jump (32x32).png" id="2_bx7ug"]
 [ext_resource type="Texture2D" uid="uid://sbealox0yqgc" path="res://Free/Main Characters/Virtual Guy/Fall (32x32).png" id="2_tfp87"]
@@ -197,18 +197,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_blbcm"]
-height = 25.0
+radius = 14.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_q2y41")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-7, -16)
+position = Vector2(-6, -16)
+scale = Vector2(0.95, 0.95)
 sprite_frames = SubResource("SpriteFrames_6lqst")
-animation = &"run"
+animation = &"jumping"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, -11)
+position = Vector2(-5, -14)
 shape = SubResource("CapsuleShape2D_blbcm")
