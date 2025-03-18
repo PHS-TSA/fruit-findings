@@ -62,7 +62,7 @@ jobs:
       - name: 🔬 Verify setup
         run: godot --version
       - name: 🔌 Make and delete directories
-        run: mkdir build/ && rm -rf addons/{godot-git-plugin}
+        run: mkdir build/ && rm -rf addons/{godot-git-plugin} && sed -i '/version_control\/plugin_name=/d;/version_control\/autoload_on_startup=/d' project.godot
         working-directory: Game Here
       - name: 🔧 Build
         run: godot --headless ${{ matrix.godot-flags }}
